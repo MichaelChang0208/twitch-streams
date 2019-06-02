@@ -20,19 +20,18 @@ width:100%;
   display:flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-left:15px;
 }
 .column{
-width:24.5%;
-padding-right:20px; 
-padding-left:20px; 
+width:370px;
+padding-right:10px; 
+padding-left:10px; 
 padding-top:20px;
 flex-grow:1;
-
 }
 .column .preview{
   position:relative;
   width:100%;
-  
 }
 .column .preview a{
   width:100%;
@@ -204,15 +203,17 @@ text-align: center;
 font-family: monospace;
 position: relative;
 background: rgb(255, 255, 255);
-border:1px solid rgb(0, 0, 0);
-color:rgb(0, 0, 0);
+border:1px solid rgb(100, 65, 164);
+border-radius:5px;
 }
 #language-change{
 font-size:20px;
-color:rgb(0, 0, 0);
+color: rgb(100, 65, 164);
+font-weight: bolder;
+letter-spacing: 3px;
 }
 #ch-btn{
-color:rgb(0, 0, 0);
+color: rgb(100, 65, 164);
 display:inline-block;
 border-radius:3px;
 text-align: center;
@@ -223,12 +224,12 @@ cursor: pointer;
 position:absolute;
 top:62%;
 right:120px;
-
+font-weight: bolder;
 }
 #en-btn{
-border-left:1px solid #000;
-border-right:1px solid #000;
-color:rgb(0, 0, 0);
+border-left:1px solid rgb(100, 65, 164);
+border-right:1px solid rgb(100, 65, 164);
+color: rgb(100, 65, 164);
 display:inline-block;
 text-align: center;
 width:60px;
@@ -239,9 +240,10 @@ cursor: pointer;
 position:absolute;
 top:62%;
 right:50px;
+font-weight: bolder;
 }
 #ko-btn{
-color:rgb(0, 0, 0);
+color: rgb(100, 65, 164);
 display:inline-block;
 text-align: center;
 width:30px;
@@ -251,6 +253,7 @@ cursor: pointer;
 position:absolute;
 top:62%;
 right:10px;
+font-weight: bolder;
 }
 /*畫面左邊固定的sidebar*/
 .left{
@@ -474,13 +477,15 @@ color:#fff;
 
 /*show and hide按鈕*/
 .show-and-hide-btn{
-width:25px;
-height:23px;
-text-align: center;
-background:rgba(116, 114, 114, 0.5);
-position:absolute;
-left:10px;
-top:15px;
+width:18px;
+height:18px;
+margin-left:5px;
+text-align: left;
+background:rgba(161, 159, 159, 0.5);
+position: absolute;;
+z-index:2;
+left:100%;
+top:5%;
 cursor: pointer;
 }
 .fa-caret-left{
@@ -505,6 +510,7 @@ width:25px;
 }
 
 /*點按鈕 觸發事件*/
+
 .fa-caret-right-active{
 font-size:20px;
 }
