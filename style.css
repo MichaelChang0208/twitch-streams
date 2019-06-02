@@ -665,12 +665,14 @@ header{
 }
 .row{
   padding:5px;
+  margin:0;
 }
 .menu{
   margin-top:60px;
-  width:95%;
+  width:97%;
   height:50px;
-
+  padding:5px;
+  border-radius: 0;
 }
 #en-btn{
   width:55px;
