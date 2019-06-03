@@ -302,7 +302,6 @@ function getSideBarData(callb){
     async: true,
      url: 'https://api.twitch.tv/kraken/streams/?client_id=' + clientId + '&limit=' + limit ,
     success: (res) => {
-      console.log('這是'+res);
       callb(null, res);
     },
     error: (err) => {
@@ -344,7 +343,9 @@ function getSideBar(data) {
 
 $('.show-and-hide-btn').on('click', function () {
   $('.row-container').toggleClass('row-container-active');
+  $('.column').toggleClass('column-active');
   $('.left').toggleClass('left-active');
+  $('.show-video').toggleClass('show-video-active');
   $('.sidebar-top').toggleClass('sidebar-top-active');
   $('.side-info').toggleClass('side-info-active');
   $('.fa-caret-right').toggleClass('fa-caret-right-active');
