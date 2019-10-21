@@ -1,0 +1,134 @@
+//Variables
+$primaryColor:#fff;
+$blackColor:#000;
+$textColor:rgb(105, 105, 105);
+$orangeColor:#ff6502;
+//Mixins
+@mixin center(){
+    justify-content: center;
+    align-items: center;
+ }
+/*global*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+    list-style: none;
+}
+img{
+    width:100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    width:100%;
+    display:flex;
+    @include center();
+    padding:0 2rem;
+}
+li{
+    cursor: pointer;
+    display:inline-block;
+    padding:2rem;
+    font-size: 2rem;
+    color:$orangeColor;
+}
+.link{
+    display:block;
+    text-decoration: none;
+    color:$blackColor;
+}
+body{
+    padding:2rem 0;
+    background-color: rgb(236, 234, 234);
+}
+/*main*/
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    .column{
+        width:20rem;
+        padding-right:2rem; 
+        padding-left:2rem;
+        margin-top:2rem;
+        // flex-grow:1 等於  flex: 1 0 auto
+        flex: 1 0 auto;
+        max-width: 20%;//當解析度越小 每個column寬度不可以超過20%
+        .preview{
+            width:100%;
+            img{
+                /*圖片下方會有一些空白 vertical-align預設值是 baseline */
+                vertical-align: middle;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+        }
+        .bottom {
+            display:flex;
+            width:100%;
+            height:7rem;
+            flex-direction: column;
+            border-top:none;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color:$primaryColor;
+            padding:.7rem;
+            position: relative;
+            h4{
+                text-overflow:ellipsis;
+                overflow:hidden;
+                white-space:nowrap;
+                margin-bottom:.3rem;
+                text-align: center;
+            }
+            p{
+                color:$orangeColor;
+                text-align: center;
+            }
+            button{
+                background-color: #4ca1f0;
+                border-radius: 5px;
+                padding:.5rem;
+                width:70%;
+                color:$primaryColor;
+                font-size:0.8rem;
+                cursor: pointer;
+                position: absolute;
+                top:70%;
+                left: 50%;
+                transform: translate(-50%, -70%);
+            }
+        }  
+    }
+}
+@media (max-width:1600px){
+    .row{
+        .column{
+            max-width: 25%;
+        }
+    }
+} 
+@media (max-width:1300px){
+    .row{
+        .column{
+            max-width: 33%;
+        }
+    }
+} 
+@media (max-width:990px){
+    .row{
+        .column{
+            max-width: 50%;
+        }
+    }
+} 
+@media (max-width:660px){
+    .row{
+        .column{
+            max-width: 100%;
+        }
+    }
+} 
