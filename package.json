@@ -20,6 +20,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "style-loader": "^1.0.0"
   }
 }
